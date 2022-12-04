@@ -19,6 +19,7 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
 
         Configuration.browserCapabilities = capabilities;
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1800x1028";
