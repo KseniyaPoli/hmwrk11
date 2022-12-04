@@ -11,8 +11,7 @@ import java.io.File;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 import static com.demoqa.utils.RandomUtils.getRandomEmail;
 import static com.demoqa.utils.RandomUtils.getRandomString;
 import static java.lang.String.format;
@@ -24,6 +23,8 @@ public class RegistrationFormWithFakerTests extends TestBase {
     @Test
             void registrationFormWithFaker() {
         registrationFormPage.openPage();
+        executeJavaScript("$('footer').remove()");
+        executeJavaScript("$('#fixedban').remove()");
         registrationFormPage.inputFirstName(testData.firstName)
                 .inputLastName(testData.lastName)
                 .inputEmail(testData.email)
