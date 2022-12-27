@@ -16,7 +16,7 @@ import static com.demoqa.utils.RandomUtils.getRandomEmail;
 import static com.demoqa.utils.RandomUtils.getRandomString;
 import static java.lang.String.format;
 
-public class RegistrationFormWithFakerTests extends TestBase {
+public class    RegistrationFormWithFakerTests extends TestBase {
     RegistrationFormPage registrationFormPage = new RegistrationFormPage();
     TestData testData = new TestData();
 
